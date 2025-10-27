@@ -1,0 +1,126 @@
+{
+  "Project Title": "Educational Keylogger with Encrypted Data Exfiltration",
+  "Organization": "Elavate Labs - Cybersecurity Internship",
+  "Objective": "Build a proof-of-concept keylogger demonstrating attack techniques and defensive measures",
+  "Components": [
+    {
+      "name": "Keystroke Capture Module",
+      "technology": "pynput library",
+      "description": "Monitors and captures keyboard input events in real-time",
+      "key_features": [
+        "Event-driven architecture",
+        "Captures regular and special keys",
+        "Non-blocking operation",
+        "Buffer management for efficiency"
+      ]
+    },
+    {
+      "name": "Encryption Module",
+      "technology": "cryptography.fernet",
+      "description": "Implements symmetric encryption for all captured data",
+      "key_features": [
+        "256-bit encryption keys",
+        "Fernet symmetric encryption",
+        "Persistent key storage",
+        "Base64 encoding for storage"
+      ]
+    },
+    {
+      "name": "Data Exfiltration Simulator",
+      "technology": "Python http.server",
+      "description": "Simulates sending encrypted data to remote server",
+      "key_features": [
+        "Localhost server simulation",
+        "HTTP POST requests",
+        "JSON payload format",
+        "Timestamp tracking"
+      ]
+    },
+    {
+      "name": "Persistence Mechanism",
+      "technology": "Windows Registry (winreg)",
+      "description": "Demonstrates startup persistence via registry modification",
+      "key_features": [
+        "Registry Run key modification",
+        "Automatic startup configuration",
+        "Clean removal on exit",
+        "Windows-specific implementation"
+      ]
+    },
+    {
+      "name": "Kill Switch",
+      "technology": "Keyboard event detection",
+      "description": "Emergency termination mechanism",
+      "key_features": [
+        "F12 key activation",
+        "Immediate cleanup",
+        "Data finalization",
+        "Persistence removal"
+      ]
+    }
+  ],
+  "Technical Specifications": {
+    "Programming Language": "Python 3.8+",
+    "Core Libraries": [
+      "pynput",
+      "cryptography",
+      "winreg",
+      "http.server"
+    ],
+    "Encryption": "Fernet (AES-128 in CBC mode)",
+    "Storage Format": "Base64-encoded encrypted JSON",
+    "Network Protocol": "HTTP POST (simulated)",
+    "Platform": "Cross-platform (full features on Windows)"
+  },
+  "Security Features": [
+    "End-to-end encryption of all logged data",
+    "Timestamp-based session tracking",
+    "Session hashing for integrity",
+    "Secure key generation and storage",
+    "Immediate kill switch capability",
+    "Automatic cleanup procedures"
+  ],
+  "Ethical Safeguards": [
+    "Explicit consent requirement",
+    "Prominent warning messages",
+    "Educational-only license",
+    "Responsible disclosure guidelines",
+    "Defensive security focus",
+    "Legal compliance emphasis"
+  ],
+  "Learning Objectives": [
+    "Understanding keystroke logging mechanisms",
+    "Implementing encryption in security tools",
+    "Simulating data exfiltration techniques",
+    "Learning Windows persistence methods",
+    "Practicing defensive security analysis",
+    "Developing ethical security mindset"
+  ],
+  "Deliverables": {
+    "Source Code Files": [
+      "educational_keylogger.py - Main keylogger implementation (400+ lines)",
+      "localhost_exfil_server.py - Exfiltration server simulation (200+ lines)",
+      "requirements.txt - Python dependencies"
+    ],
+    "Documentation": [
+      "README.md - Comprehensive project documentation (500+ lines)",
+      "Inline code comments and docstrings",
+      "Ethical guidelines and warnings",
+      "Installation and usage instructions"
+    ],
+    "Generated Files": [
+      "encryption.key - Fernet encryption key",
+      "encrypted_keylog.dat - Encrypted keystroke logs",
+      "keylogger.log - Application log file",
+      "exfiltrated_data_*.json - Simulated exfiltration data"
+    ]
+  },
+  "Project Statistics": {
+    "Total Lines of Code": "600+ lines",
+    "Documentation Size": "500+ lines",
+    "Number of Functions": "20+",
+    "Classes Implemented": 2,
+    "Security Warnings": "Multiple throughout",
+    "Ethical Checkpoints": "3 consent points"
+  }
+}
